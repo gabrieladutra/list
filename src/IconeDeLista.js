@@ -1,8 +1,5 @@
 import React from 'react';
 import { Container, makeStyles } from '@material-ui/core';
-import { black } from 'color-name';
-import { width, height, fontStyle, display } from '@material-ui/system';
-import { wrap } from 'module';
 import Checkbox from '@material-ui/core/Checkbox';
 import IconeDeListaLinha from './IconeDeListaLinha';
 
@@ -72,4 +69,3 @@ function IconeDeLista(props){
     )
 }
 export default IconeDeLista;
-
