@@ -27,7 +27,7 @@ const useStyles = makeStyles({
     MuiCheckbox:{
         padding: '1px'
     }
-
+//muicheckbox: propiedade css do checkbox
 })
 
 function IconeDeListaLinha(props) {
