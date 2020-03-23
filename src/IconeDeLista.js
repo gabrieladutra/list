@@ -4,13 +4,16 @@ import { black } from 'color-name';
 import { width, height, fontStyle, display } from '@material-ui/system';
 import { wrap } from 'module';
 import Checkbox from '@material-ui/core/Checkbox';
-
+import IconeDeListaLinha from './IconeDeListaLinha';
 
 const useStyles = makeStyles({
     container: {
         'background-color': 'rgb(254, 243, 221)',
         width: '300px',
         color: 'rgb(131, 131, 139)',
+        border: '4px solid black'
+
+        
        
     },
     tituloLista: {
@@ -24,11 +27,16 @@ const useStyles = makeStyles({
         display: 'flex',
         'justify-content': 'space-between',
         'flex-direction': 'row',
+        
     },
     preco:{
        display: 'flex',
        justifyContent: 'center',
        flexDirection: 'column'
+    },
+
+    MuiCheckbox:{
+        padding: '1px'
     }
 
 })
@@ -39,36 +47,14 @@ function IconeDeLista(props) {
             <div className={classes.tituloLista}>
                 {props.lista.nome}
             </div>
-            <div className={classes.produto}>
-                <div>
-                    <Checkbox checked={props.lista.produtos[0].comprado} size='small' ></Checkbox>
-                    {props.lista.produtos[0].nome}
-                </div>
-                <div className={classes.preco}>
-                    {props.lista.produtos[0].preco}
-                </div>
-            </div>
+            <IconeDeListaLinha produto={props.lista.produtos[0]}></IconeDeListaLinha>
+            <IconeDeListaLinha produto={props.lista.produtos[1]}></IconeDeListaLinha>
+            <IconeDeListaLinha produto={props.lista.produtos[2]}></IconeDeListaLinha>
+            
 
-            <div className={classes.produto}>
-                <div> 
-                    <Checkbox checked={props.lista.produtos[1].comprado} size='small'></Checkbox>
-                    {props.lista.produtos[1].nome}
-                </div>
-                <div className={classes.preco}>
-                    {props.lista.produtos[1].preco}
-                </div>
-            </div>
-            <div className={classes.produto}>
-                <div>
-                    <Checkbox checked={props.lista.produtos[2].comprado} size='small'></Checkbox>
-                {props.lista.produtos[2].nome}
-                </div>
-                <div className={classes.preco}>
-                    {props.lista.produtos[2].preco}
-                </div>
-            </div>
 
         </Container>
     )
 }
 export default IconeDeLista;
+
